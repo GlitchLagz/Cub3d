@@ -1,0 +1,33 @@
+// Parser Accepts A Path Ending In '|', textures are specified as NO(north), SO(south), EA(east), WE(west).
+// Textures are expected to be in relative path format beginning with a './'
+// Floor and Ceiling Colour is specified by 'F' and 'C' in RGB format 255,255,255
+// Map must be placed below parameter set, Spaces to be filled around map, and '|' for all map lines plus one above and below.
+// Map will error if walls are not enclosing.
+// Map will error if walls prevent a path to a floor piece '0'.
+// Map character is facing based on the char, ('N', 'S', 'E', or 'W'), representing it.
+// An empty line is a comment like this one, a space between any of the parameters in the top section.
+// Empty lines must not be dividing the map.
+
+// Textures
+NO ./assets/bricks.xpm
+SO ./assets/stones.xpm
+EA ./assets/wood.xpm
+WE ./assets/steel.xpm
+
+// Floor & Ceiling Colour
+F	100,100,0
+C	0,0,255
+            1111111111111111111111111
+            1000000000110000000000001      
+            1011000001110000000000001
+            1001000000000000000000001      
+    111111111011000001110000000000011
+    100000000011000001110111110111111 
+    11110111111111011100000010001
+    11110111111111011101010010001      
+    11000000110101011100000010001
+    10000000000000001100000010001
+    1000N000000000001101010010001
+    1100000111010101111101101000111
+    11110111 1110101 100011010001
+    11111111 1111111 111111111111
